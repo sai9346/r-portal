@@ -3,8 +3,8 @@ import axios from 'axios';
 
 // Create an Axios instance with a base URL
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000', // Fallback to localhost in dev
-  withCredentials: true,
+  baseURL: process.env.REACT_APP_API_URL || 'https://r-backend-k4jv.onrender.com', // Ensure this points to your backend
+  withCredentials: true, // Send credentials such as cookies
 });
 
 const JobService = {
@@ -13,13 +13,10 @@ const JobService = {
       const response = await api.get('/api/jobs');
       return response.data;
     } catch (error) {
-      console.error('Error fetching jobs:', error.response?.status, error.response?.data); // Log more details
+      console.error('Error fetching jobs:', error.response?.status, error.response?.data || error.message); // Log more detailed error
       throw new Error('Error fetching jobs');
     }
   },
 };
-
-
-  // Define other methods as needed (e.g., createJobPost, etc.)
 
 export default JobService;
