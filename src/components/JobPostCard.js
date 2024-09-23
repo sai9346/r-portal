@@ -91,8 +91,7 @@ const JobPostCard = ({ job, onRemove }) => {
   const handleApply = () => {
     if (job) {
       navigate('/application-form', { state: { job } });
-      onRemove(job.id); // Remove card on apply
-    } else {
+      onRemove(job.id); 
       console.error('Job data is missing');
     }
   };
@@ -102,7 +101,7 @@ const JobPostCard = ({ job, onRemove }) => {
     const reason = prompt('Please enter your reason for not being interested:');
     if (reason) {
       console.log(`Reason for not being interested: ${reason}`);
-      onRemove(job.id); // Remove card if not interested
+      onRemove(job.id); 
     }
   };
 

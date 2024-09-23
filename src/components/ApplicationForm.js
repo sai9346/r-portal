@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 const FormContainer = styled.div`
   padding: 20px;
-  margin-top: 50px; /* Added space at the top */
+  margin-top: 50px; 
   max-width: 600px;
-  margin: 50px auto; /* Ensures horizontal centering and top margin */
+  margin: 50px auto; 
   
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -73,7 +73,7 @@ const ErrorMessage = styled.p`
 `;
 
 const ApplicationForm = ({ location }) => {
-  const job = location?.state?.job || {}; // Fallback if no job data is passed
+  const job = location?.state?.job || {}; 
   const [resume, setResume] = useState(null);
   const [coverLetter, setCoverLetter] = useState(null);
   const [acceptedTerms, setAcceptedTerms] = useState(false);

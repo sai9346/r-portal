@@ -8,17 +8,16 @@ const CandidateCardContainer = styled.div`
   margin: 16px 0;
   border-radius: 12px;
   background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  min-height: 250px; /* Ensures a base height to "fill" the card visually */
+  min-height: 250px; 
   display: flex;
-  flex-direction: column; /* Makes the content stack vertically */
-  justify-content: space-between; /* Distributes content more evenly */
+  flex-direction: column; 
+  justify-content: space-between; 
 
   &:hover {
-    transform: translateY(-5px); /* Slight lift effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-  }
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 `;
 
 // Styling for Candidate Name (Title)
@@ -34,11 +33,11 @@ const CandidateName = styled.h3`
 const CandidateDetails = styled.p`
   margin: 8px 0;
   color: #555;
-  font-size: 1em; /* Slightly larger font for balance */
-  line-height: 1.6; /* More line spacing to create a fuller look */
+  font-size: 1em; 
+  line-height: 1.6; 
 
   strong {
-    color: #007bff; /* Accent color for bold text */
+    color: #007bff;
   }
 `;
 
@@ -48,7 +47,7 @@ const CandidateSkills = styled.p`
   color: #666;
   font-size: 1em;
   font-style: italic;
-  line-height: 1.6; /* Make it more readable and balanced */
+  line-height: 1.6;
 `;
 
 const CandidateCard = ({ candidate }) => {
