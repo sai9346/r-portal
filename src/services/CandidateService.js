@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api',
+  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000',
 });
 
 const CandidateService = {
@@ -11,7 +11,7 @@ const CandidateService = {
   },
 
   sendBulkMessages: async (recipients, message) => {
-    const response = await api.post('/candidates/bulk-message', { recipients, message });
+    const response = await api.post('/api/candidates/bulk-message', { recipients, message });
     return response.data;
   }
 };
