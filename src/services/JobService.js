@@ -4,6 +4,7 @@ import axios from 'axios';
 // Create an Axios instance with a base URL
 const api = axios.create({
   baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000', // Fallback to localhost in dev
+  withCredentials: true,
 });
 
 const JobService = {
