@@ -6,7 +6,7 @@ const api = axios.create({
 
 const CandidateService = {
   getAllCandidates: async () => {
-    const response = await api.get('/candidates');
+    const response = await api.get('/api/candidates');
     return response.data;
   },
 

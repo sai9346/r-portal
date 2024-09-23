@@ -7,7 +7,7 @@ const api = axios.create({
 const ApplicationService = {
   getAllApplications: async () => {
     try {
-      const response = await api.get('/applications'); // Use the configured instance
+      const response = await api.get('/api/applications'); // Use the configured instance
       return response.data;
     } catch (error) {
       console.error('Error fetching applications:', error);
