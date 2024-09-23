@@ -1,7 +1,7 @@
 // src/services/InterviewService.js
 import axios from 'axios';
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL, // Use the environment variable
+  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api', // Fallback to localhost in dev
 });
 const InterviewService = {
   scheduleInterview: async (interviewDetails) => {
