@@ -5,7 +5,7 @@ import JobService from '../services/JobService';
 
 const JobPostingPage = () => {
   const [jobs, setJobs] = useState([]);
-  const [error, setError] = useState(null); // State for handling errors
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchJobs = async () => {
@@ -32,7 +32,7 @@ const JobPostingPage = () => {
         <p>No job postings available.</p>
       ) : (
         jobs.map((job) => (
-          <JobPostCard key={job._id} job={job} /> // Use _id if that's the field in the backend
+          <JobPostCard key={job._id} job={job} />
         ))
       )}
     </div>

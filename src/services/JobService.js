@@ -13,7 +13,7 @@ const JobService = {
       const response = await api.get('/api/jobs');
       return response.data;
     } catch (error) {
-      console.error('Error fetching jobs:', error.response?.status, error.response?.data || error.message); // Log more detailed error
+      console.error('Error fetching jobs:', error.response?.status, error.response?.data || error.message);
       throw new Error('Error fetching jobs');
     }
   },
